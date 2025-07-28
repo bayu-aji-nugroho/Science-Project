@@ -7,22 +7,26 @@ export default function Subjects(){
         {
             judul:"matematika",
             icon:"./Math.svg",
-            paragraft: "jfhddffnjnfjn\ndjfnjdnfjdnjfdj"
+            paragraft: "jfhddffnjnfjn\ndjfnjdnfjdnjfdj",
+            link:"/Math"
         },
         {
             judul:"fisika",
             icon:"./Physics.svg",
-            paragraft: "jfhddffnjnfjnd\njfnjdnfjdnjfdj"
+            paragraft: "jfhddffnjnfjnd\njfnjdnfjdnjfdj",
+            link:"/phy"
         },
         {
             judul:"kimia",
             icon:"./kimia.svg",
-            paragraft: "jfhddffnjnfjnd\njfnjdnfjdnjfdj"
+            paragraft: "jfhddffnjnfjnd\njfnjdnfjdnjfdj",
+            link:"chi"
         },
         {
             judul:"biologi",
             icon:"./biology.svg",
-            paragraft: "jfhddffnjnfjndj\nfnjdnfjdnjfdj"
+            paragraft: "jfhddffnjnfjndj\nfnjdnfjdnjfdj",
+            link:"bio"
         },
     ]
     return (
@@ -31,11 +35,11 @@ export default function Subjects(){
                 {
                 data.map( (value,i) => 
                     (
-                        <div key={i} className="m-3 md:w-1/2 flex  bg-green-600  rounded-2xl ">
+                        <a href={value.link} key={i} className="m-3 md:w-1/2 flex  bg-green-600  rounded-2xl hover:bg-purple-600 ">
                             <Card icon={value.icon}
                             judul={value.judul}
                             paragraft={value.paragraft}/>
-                        </div>
+                        </a>
                     )
                 )
             }

@@ -7,7 +7,7 @@ export default function Heading (){
           Science Project
         </h1>
         <p className="text-base sm:text-lg lg:text-xl text-gray-300 px-2 py-3 md:px-0 font-bold">
-          Eksplorasi Dunia Sains secara inovatif dan Menarik secara gratis!
+          Eksplorasi dunia sains yang inovatif dan menarik secara gratis!
         </p>
       </div>
       <div className=" mt-16 flex items-center justify-center md:basis-1/4">
