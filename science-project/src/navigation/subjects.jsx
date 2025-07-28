@@ -18,13 +18,13 @@ export default function Subjects(){
         },
         {
             judul:"kimia",
-            icon:"./kimia.svg",
+            icon:"./Kimia.svg",
             paragraft: "jfhddffnjnfjnd\njfnjdnfjdnjfdj",
             link:"chi"
         },
         {
             judul:"biologi",
-            icon:"./biology.svg",
+            icon:"./Biology.svg",
             paragraft: "jfhddffnjnfjndj\nfnjdnfjdnjfdj",
             link:"bio"
         },
