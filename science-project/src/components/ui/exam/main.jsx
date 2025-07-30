@@ -1,48 +1,11 @@
-// /app/ujian/page.jsx (Contoh path file di Next.js App Router)
-"use client"; // Diperlukan karena kita menggunakan hooks (useState, useEffect)
+"use client"; 
 
 import { useState, useEffect } from 'react';
+import { InlineMath, BlockMath } from 'react-katex';
+import 'katex/dist/katex.min.css';
+import dataSoal from "@/components/ui/exam/data.json"
 
-// --- DATA SOAL (VERSI TEKS BIASA) ---
-// Anda bisa mengganti ini dengan data dari API
-const dataSoal = [
-  {
-    id: 1,
-    soal: "Hasil dari integral (3x^2 - 4x + 5) dx adalah...",
-    pilihan: [
-      "x^3 - 2x^2 + 5x + C",
-      "3x^3 - 4x^2 + 5x + C",
-      "x^3 - 4x^2 + 5 + C",
-      "6x - 4 + C"
-    ],
-    jawabanBenar: 0,
-  },
-  {
-    id: 2,
-    soal: "Jika f(x) = cos(2x), maka turunan f'(x) adalah...",
-    pilihan: [
-      "sin(2x)",
-      "-sin(2x)",
-      "2sin(2x)",
-      "-2sin(2x)"
-    ],
-    jawabanBenar: 3,
-  },
-  {
-    id: 3,
-    soal: "Nilai dari lim x->∞ (4x^2 - 5) / (2x^2 + 3x) adalah...",
-    pilihan: ["0", "1", "2", "Tak terhingga"],
-    jawabanBenar: 2,
-  },
-  {
-    id: 4,
-    soal: "Bentuk sederhana dari akar(75) adalah...",
-    pilihan: ["5 akar(3)", "3 akar(5)", "25 akar(3)", "5 akar(5)"],
-    jawabanBenar: 0,
-  }
-];
 
-// --- KOMPONEN UTAMA HALAMAN UJIAN ---
 export default function HalamanUjian() {
   // State untuk melacak soal saat ini
   const [soalIndex, setSoalIndex] = useState(0);
@@ -53,7 +16,7 @@ export default function HalamanUjian() {
   // State untuk skor
   const [skor, setSkor] = useState(0);
   // State untuk timer (dalam detik)
-  const [waktu, setWaktu] = useState(300); // 5 menit
+  const [waktu, setWaktu] = useState(60); // 5 menit
 
   // Efek untuk menjalankan timer
   useEffect(() => {
@@ -160,8 +123,9 @@ export default function HalamanUjian() {
             <p className="text-lg font-semibold">
               Soal {soalIndex + 1} dari {dataSoal.length}
             </p>
-            <div className="mt-4 text-xl leading-relaxed">
-              <p>{dataSoal[soalIndex].soal}</p>
+            <div className="mt-4 text-sm md:text-xl leading-relaxed">
+              <BlockMath math={`${dataSoal[soalIndex].soal}`}/>
+              
             </div>
           </div>
 
@@ -180,7 +144,7 @@ export default function HalamanUjian() {
                       : 'bg-gray-700 border-gray-600 hover:bg-gray-600 hover:border-green-500'}
                   `}
                 >
-                  {pilihan}
+                  <InlineMath math={`${pilihan}`} /> 
                 </button>
               );
             })}

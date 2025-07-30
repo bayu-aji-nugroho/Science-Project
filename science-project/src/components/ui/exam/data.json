@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "soal": "\\text{-15 + 27 - 8 = ...}",
+    "pilihan": ["\\text{4}", "\\text{10}", "\\text{12}","\\text{8}"],
+    "jawabanBenar": 1
+  },
+  {
+    "id": 2,
+    "soal": "\\text{Faktorisasi prima dari 84 adalah ...}",
+    "pilihan": [
+      "\\text{2}^2 \\times \\text{3} \\times \\text{7}",
+      "\\text{2} \\times \\text{3}^2 \\times \\text{7}",
+      "\\text{2}^3 \\times \\text{3} \\times \\text{7}"
+    ],
+    "jawabanBenar": 2
+  },
+  {
+    "id": 3,
+    "soal": "\\text{Hasil dari } \\frac{3}{4} + \\frac{2}{5} \\text{ adalah ...}",
+    "pilihan": [
+      "\\frac{31}{20}",
+      "\\frac{23}{20}",
+      "\\frac{27}{20}"
+    ],
+    "jawabanBenar": 1
+  },
+  {
+    "id": 4,
+    "soal": "\\text{Jika} \\ 3 \\ \\text{buku seharga Rp 18.000, maka harga 5 buku adalah ...}",
+    "pilihan": [
+      "\\text{Rp 30.000}",
+      "\\text{Rp 25.000}",
+      "\\text{Rp 20.000}"
+    ],
+    "jawabanBenar": 0
+  },
+  {
+    "id": 5,
+    "soal": "\\text{Jika } 2x + 5 = 15 \\text{, maka nilai } x \\text{ adalah ...}",
+    "pilihan": ["\\text{5}", "\\text{4}", "\\text{3}"],
+    "jawabanBenar": 0
+  },
+  {
+    "id": 6,
+    "soal": "\\text{Luas persegi panjang dengan panjang 12 cm dan lebar 7 cm adalah ...}",
+    "pilihan": [
+      "\\text{72 cm}^2",
+      "\\text{80 cm}^2",
+      "\\text{84 cm}^2"
+    ],
+    "jawabanBenar": 2
+  },
+  {
+    "id": 7,
+    "soal": "\\text{Skala peta 1:200.000. Jika jarak dua kota pada peta 5 cm,}\\\\ \\text{maka jarak sebenarnya adalah ...}",
+    "pilihan": [
+      "\\text{10 km}",
+      "\\text{15 km}",
+      "\\text{20 km}"
+    ],
+    "jawabanBenar": 2
+  },
+  {
+    "id": 8,
+    "soal": "\\text{Hasil dari } (-6)^2 \\text{ adalah ...}",
+    "pilihan": ["\\text{36}", "\\text{-36}", "\\text{12}"],
+    "jawabanBenar": 0
+  },
+  {
+    "id": 9,
+    "soal": "\\text{Volume kubus dengan sisi 9 cm adalah ...}",
+    "pilihan": ["\\text{729 cm}^3", "\\text{81 cm}^3", "\\text{243 cm}^3"],
+    "jawabanBenar": 0
+  },
+  {
+    "id": 10,
+    "soal": "\\text{Jika } x = 3 \\text{ dan } y = 2 \\text{, maka nilai dari } 2x^2 - y \\text{ adalah ...}",
+    "pilihan": ["\\text{16}", "\\text{18}", "\\text{12}"],
+    "jawabanBenar": 1
+  }
+]

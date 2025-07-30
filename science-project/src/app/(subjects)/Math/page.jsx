@@ -1,3 +1,4 @@
+import Card from "@/components/ui/card";
 import Footer from "@/components/ui/footer";
 import HeadingSubject from "@/components/ui/headingsubject";
 import Table from "@/components/ui/table";
@@ -11,7 +12,9 @@ export default function Page(){
     return (
         <div className="">
             <HeadingSubject infor={"Matematika adalah ilmu yang mempelajari pola, struktur, dan hubungan menggunakan logika dan simbol."} link={"/Math.svg"} title={"MATEMATIKA"}/>
-            <Table data={data} title={"dkfkkn"}/>
+            <a href="/exam" className="bg-orange-600  ">
+                <Card icon={""} judul={"latsol"} paragraft={"sdmdsmk"}/>
+            </a>
             <Footer bg={"bg-orange-700"} />
         </div>
     )
