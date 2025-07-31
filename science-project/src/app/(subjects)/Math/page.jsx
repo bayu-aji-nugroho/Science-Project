@@ -13,7 +13,7 @@ export default function Page(){
             <HeadingSubject infor={"Matematika adalah ilmu yang mempelajari pola, struktur, dan hubungan menggunakan logika dan simbol."} link={"/Math.svg"} title={"MATEMATIKA"}/>
             
             <a href="/exam" className="bg-orange-600  ">
-                <Card icon={""} judul={"latsol"} paragraft={"sdmdsmk"}/>
+                <Card icon={""} judul={"pretest"} paragraft={"sdmdsmk"}/>
             </a>
             <Footer bg={"bg-orange-700"} />
         </div>
