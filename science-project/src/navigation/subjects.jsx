@@ -7,25 +7,25 @@ export default function Subjects(){
         {
             judul:"matematika",
             icon:"./Math.svg",
-            paragraft: "jfhddffnjnfjn\ndjfnjdnfjdnjfdj",
+            paragraft: "Mengungkap pola, memecahkan masalah, dan melatih logika berpikir",
             link:"/Math"
         },
         {
             judul:"fisika",
             icon:"./Physics.svg",
-            paragraft: "jfhddffnjnfjnd\njfnjdnfjdnjfdj",
+            paragraft: "Mempelajari hukum alam yang mengatur gerak, energi, dan materi.",
             link:"/phy"
         },
         {
             judul:"kimia",
             icon:"./Kimia.svg",
-            paragraft: "jfhddffnjnfjnd\njfnjdnfjdnjfdj",
+            paragraft: "Ilmu pusat yang menghubungkan semua cabang sains.",
             link:"chi"
         },
         {
             judul:"biologi",
             icon:"./Biology.svg",
-            paragraft: "jfhddffnjnfjndj\nfnjdnfjdnjfdj",
+            paragraft: "Mempelajari sistem kompleks yang membentuk semua makhluk hidup",
             link:"bio"
         },
     ]

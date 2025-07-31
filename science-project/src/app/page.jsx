@@ -7,7 +7,7 @@ import Footer from "@/components/ui/footer";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="font-main">
       <Heading />
       <VisiMisi />
       <Subjects />

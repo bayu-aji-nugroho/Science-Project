@@ -11,17 +11,25 @@ export default function Heading (){
         </p>
       </div>
       <div className=" mt-16 flex items-center justify-center md:basis-1/4">
-       <button className="
-        bg-green-700 hover:bg-transparent
-        hover:ring-1 hover:ring-green-700
-        text-white font-bold
-        py-3 px-9
-        rounded-full 
-         hover:shadow-green-600 hover:shadow-md
-        transition-all duration-300 ease-in-out
-        ">
-      Donate
-    </button>
+      <div className="flex">
+        <div className="p-3">
+          <a href="https://www.bermatematika.my.id/" className="flex">
+            <p className="mx-1">portfolioku</p>
+             <img src="\icon\code_darkmode.svg"/>
+          </a>
+        </div>
+          <button className="
+            bg-green-700 hover:bg-transparent
+            hover:ring-1 hover:ring-green-700
+            text-white font-bold
+            py-3 px-9
+            rounded-full 
+            hover:shadow-green-600 hover:shadow-md
+            transition-all duration-300 ease-in-out
+            ">
+          Donate
+        </button>
+      </div>
       </div>
     </header>
     )
