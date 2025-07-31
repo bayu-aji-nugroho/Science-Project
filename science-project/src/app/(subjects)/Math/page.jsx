@@ -1,6 +1,8 @@
+import MainPageCompononen from "@/components/subject_component/mainPage";
 import Card from "@/components/ui/card";
 import Footer from "@/components/ui/footer";
 import HeadingSubject from "@/components/ui/headingsubject";
+import db from "@/app/(subjects)/Math/subMateri.json"
 
 export default function Page(){
     const data = [{
@@ -12,10 +14,11 @@ export default function Page(){
         <div className="">
             <HeadingSubject infor={"Matematika adalah ilmu yang mempelajari pola, struktur, dan hubungan menggunakan logika dan simbol."} link={"/Math.svg"} title={"MATEMATIKA"}/>
             
-            <a href="/exam" className="bg-orange-600  ">
+            <a href="/exam" className="bg-emerald-700">
                 <Card icon={""} judul={"pretest"} paragraft={"sdmdsmk"}/>
             </a>
-            <Footer bg={"bg-orange-700"} />
+            <MainPageCompononen MainData={db}/>
+            <Footer bg={"bg-emerald-700"} />
         </div>
     )
 }
