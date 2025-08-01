@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import { Comic_Relief } from 'next/font/google';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const fontC = Comic_Relief({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${fontC.variable}  antialiased bg-[#030712] `}
       >
         <Analytics />
+        <SpeedInsights />
         {children}
       </body>
     </html>
