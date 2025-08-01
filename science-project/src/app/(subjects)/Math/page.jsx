@@ -14,11 +14,11 @@ export default function Page(){
         <div className="">
             <HeadingSubject infor={"Matematika adalah ilmu yang mempelajari pola, struktur, dan hubungan menggunakan logika dan simbol."} link={"/Math.svg"} title={"MATEMATIKA"}/>
             
-            <a href="/exam" className="bg-emerald-700">
+            <a href="/exam" className="bg-lime-600">
                 <Card icon={""} judul={"pretest"} paragraft={"sdmdsmk"}/>
             </a>
             <MainPageCompononen MainData={db}/>
-            <Footer bg={"bg-emerald-700"} />
+            <Footer bg={"bg-lime-600"} />
         </div>
     )
 }

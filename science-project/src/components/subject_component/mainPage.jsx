@@ -8,9 +8,9 @@ export default function MainPageCompononen({MainData}){
                     MainData.map((data,index)=>(
                         <div className=" shadow shadow-lime-900 bg-lime-600 rounded-2xl">
                             <div className="mx-1">
-                                <img className="aspect-square p-3" src={`${data.linkImage}`}></img>
+                                <img className=" aspect-square pt-2 rounded-full" src={`${data.linkImage}`}></img>
                                 <div className="p-2">
-                                    <h1 className="text-sm font-bold my-2">{data.judul}</h1>
+                                    <h1 className="text-sm font-bold my-2 text-center">{data.judul}</h1>
                                     {
                                         data.prasyarat.map((dataP)=>(
                                             <div className="flex"> {dataP}</div>
