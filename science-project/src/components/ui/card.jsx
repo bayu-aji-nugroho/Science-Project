@@ -1,19 +1,30 @@
-export default function Card({judul,icon,paragraft}){
+export default function Card({data,theme,imageSize}){
     return (
-        <div className="bg-transparent text-white p-4 ">
-          <div className=" text-5xl h-10 w-10 ">
-            <img className="" src= {`${icon}` } />
-          </div>
+      <div className={` mt-10 mx-2 ${data.length == 1?"flex":"grid grid-cols-2 md:grid-cols-4"}`}>
+       {
+        data.map((data,i)=>(
+          <a href={`${data.link}`} className={` text-white p-4 rounded-2xl m-2 ${theme} `} key={i}>
+            <div className=" text-5xl ">
+              <img className={`aspect-square ${imageSize} ${data.icon == null? "hidden":""}`} src= {`${data.icon}` } />
+            </div>
+      
+            <h1 className="text-md font-bold">
+              {data.judul}
+            </h1>
+          
+            <p className="text-sm text-gray-300 ">
+              {data.paragraft}
+            </p>
+            { 
+              data.prasyarat == undefined?  null:data.prasyarat.map((dataP, i)=>(
+                  <div key={i} className="flex"> {dataP}</div>
+              ))
+            }
+        </a>
+        ))
+       }
+      </div>
         
-          <h1 className="text-md font-bold  text-white">
-            {judul}
-          </h1>
-
-        
-          <p className="text-sm text-gray-300 ">
-            {paragraft}
-          </p>
-        </div>
     
     )
 }

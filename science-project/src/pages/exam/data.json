@@ -2,11 +2,7 @@
   {
     "id": 1,
     "soal": "\\text{-15 + 27 - 8 = ...}",
-    "pilihan": [
-      "\\text{12}",
-      "\\text{4}",
-      "\\text{8}",
-      "\\text{10}"
+    "pilihan": ["\\text{12}","\\text{4}","\\text{8}","\\text{10}"
     ],
     "jawabanBenar": 1
   },

@@ -1,4 +1,4 @@
-import Main from "@/components/ui/exam/main";
+import Main from "@/pages/exam/main";
 
 export default function Page(){
     return(

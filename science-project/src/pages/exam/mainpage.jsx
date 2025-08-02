@@ -1,5 +1,5 @@
 "use client";
-import dataSoal from "@/components/ui/exam/data.json"
+import dataSoal from "@/pages/exam/data.json"
 import { InlineMath, BlockMath } from 'react-katex';
 
 const Page = ({waktu,soalIndex, jawabanPengguna,

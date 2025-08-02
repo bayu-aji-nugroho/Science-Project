@@ -2,8 +2,15 @@
         {
             "judul":"eksponensial dan logaritma",
             "deskripsi":"lorem imsum dolor",
-            "linkImage":"subject/subsubject/eksponensial.png",
-            "linkPage":"/eksponensial-dan-logaritma",
+            "icon":"subject/subsubject/eksponensial.png",
+            "link":"/eksponensial-dan-logaritma",
+            "prasyarat":[]
+        },
+        {
+            "judul":"eksponensial dan logaritma",
+            "deskripsi":"lorem imsum dolor",
+            "icon":"subject/subsubject/eksponensial.png",
+            "link":"/eksponensial-dan-logaritma",
             "prasyarat":[]
         }
     ]
