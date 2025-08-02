@@ -18,7 +18,7 @@ export default function HalamanUjian() {
   const [skor, setSkor] = useState(0);
   // State untuk timer (dalam detik)
   const [waktu, setWaktu] = useState(300); 
-  const [terjawab, setTerjawab] = useState({}) //index: true/false
+  
 
   // Efek untuk menjalankan timer
   useEffect(() => {

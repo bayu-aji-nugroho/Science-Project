@@ -16,7 +16,9 @@ export default function Card({data,theme,imageSize}){
               {data.paragraft}
             </p>
             { 
-              data.prasyarat == undefined?  null:data.prasyarat.map((dataP, i)=>(
+              data.prasyarat == undefined?  (
+                <div></div>
+              ):data.prasyarat.map((dataP, i)=>(
                   <div key={i} className="flex"> {dataP}</div>
               ))
             }
