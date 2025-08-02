@@ -2,10 +2,8 @@ import HeadingSubject from "@/components/ui/headingsubject";
 import db from "@/app/(subjects)/Math/subMateri.json"
 import Card from "@/components/ui/card";
 import Footer from "@/components/main/footer";
-import getData from "@/lib/firebase/service";
 
-export default async function SubjectPage({data}){
-    const Data = await getData();
+export default function SubjectPage({data}){
     return (
         <div className="text-white">
            
