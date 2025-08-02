@@ -18,7 +18,7 @@ export default function Home() {
             judul:"fisika",
             icon:"./Physics.svg",
             paragraft: "Mempelajari hukum alam yang mengatur gerak, energi, dan materi.",
-            link:"/Phy",
+            link:"phy",
             prasyarat:[]
         },
         {
