@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import 'katex/dist/katex.min.css';
-import dataSoal from "@/pages/exam/data.json"
+import dataSoal from "@/components/exam/data.json"
 import MainPage from './mainpage';
 import Skor from './skor';
 
