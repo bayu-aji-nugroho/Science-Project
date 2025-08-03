@@ -1,9 +1,8 @@
 "use client";
-import dataSoal from "@/components/exam/data.json"
 import { InlineMath, BlockMath } from 'react-katex';
 
 const Page = ({waktu,soalIndex, jawabanPengguna,
-     handleSoalSebelumnya,handleSoalBerikutnya, handlePilihJawaban})=>{
+     handleSoalSebelumnya,handleSoalBerikutnya, handlePilihJawaban, dataSoal})=>{
 
 
   const formatWaktu = (detik) => {
@@ -31,7 +30,6 @@ const Page = ({waktu,soalIndex, jawabanPengguna,
                     </p>
                     <div className="mt-3 text-sm md:text-xl leading-relaxed overflow-x-auto">
                       <BlockMath math={`${dataSoal[soalIndex].soal}`}/>
-                      
                     </div>
                   </div>
         
@@ -80,7 +78,7 @@ const Page = ({waktu,soalIndex, jawabanPengguna,
 }
 
 export default function MainPage({waktu,soalIndex, jawabanPengguna,
-     handleSoalSebelumnya,handleSoalBerikutnya, handlePilihJawaban, handleSquere}){
+     handleSoalSebelumnya,handleSoalBerikutnya, handlePilihJawaban, handleSquere, dataSoal}){
       return (
         <div className="md:flex  ">
           <div className="md:basis-1/4 lg:mr-4">
@@ -103,7 +101,7 @@ export default function MainPage({waktu,soalIndex, jawabanPengguna,
           <div className="basis-3/4">
             <Page waktu={waktu} soalIndex={soalIndex} jawabanPengguna={jawabanPengguna}
                     handlePilihJawaban={handlePilihJawaban} handleSoalBerikutnya={handleSoalBerikutnya}
-                    handleSoalSebelumnya={handleSoalSebelumnya} />
+                    handleSoalSebelumnya={handleSoalSebelumnya} dataSoal={dataSoal} />
           </div>
           
         </div>

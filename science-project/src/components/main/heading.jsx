@@ -3,7 +3,7 @@ export default function Heading (){
 
     <header className="text-white md:flex ">
       <div className=" px-4 text-center md:text-left   shadow-2xl shadow-green-700 md:rounded-br-full p-5 md:basis-3/4">
-        <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold  text-green-500 mb-2 md:mb-3 ">
+        <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold text-green-500 mb-2 md:mb-3 ">
           Science Project
         </h1>
         <p className="text-base sm:text-lg lg:text-xl text-gray-300 px-2 py-3 md:px-0 font-bold">

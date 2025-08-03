@@ -1,17 +1,18 @@
-import {collection, getDocs, getFirestore, } from "firebase/firestore"
+import {collection, doc, getDoc, getDocs, getFirestore, limit, query, Query, QuerySnapshot, where, } from "firebase/firestore"
 import app from "./init"
 
 const db = getFirestore(app)
 
-const usersColection = collection(db,"Subjects")
+export default async function getDataSlug(slug){
+     const docRef = doc(db, "matematika", slug);
+     const docsnap = await getDoc(docRef)
+    try{
+        return docsnap.data()
 
-async function getData(params) {
-    const query = await getDocs(usersColection)
-    const data = query.docs.map((doc)=>({
-        id:doc.id,
-        ...doc.data(),
-    }))
-    return data;
+    }catch{
+        return null;
+    }
 }
 
-export default getData;
+
+

@@ -97,6 +97,6 @@ export default function HalamanUjian() {
               handleSoalBerikutnya={handleSoalBerikutnya}
               handleSoalSebelumnya={handleSoalSebelumnya}
               handlePilihJawaban={handlePilihJawaban}
-              handleSquere={handleSquere} />
+              handleSquere={handleSquere} dataSoal={dataSoal}  />
   );
 }

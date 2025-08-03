@@ -1,7 +1,8 @@
 import SubjectPage from "@/components/pages/subjectPage"
 
 
-export default function Page(){
+export default async function Page({params}){
+
     const data = {
         judul:"MATEMATIKA",
         icon:"/Math.svg",

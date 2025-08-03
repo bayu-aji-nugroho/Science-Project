@@ -5,7 +5,7 @@ import Heading from "../components/main/heading"
 import VisiMisi from "../components/main/visimisi";
 import Footer from "@/components/main/footer";
 
-export default function Home() {
+export default  function Home() {
   const data = [
         {
             judul:"matematika",
@@ -18,7 +18,7 @@ export default function Home() {
             judul:"fisika",
             icon:"./Physics.svg",
             paragraft: "Mempelajari hukum alam yang mengatur gerak, energi, dan materi.",
-            link:"phy",
+            link:"/phy",
             prasyarat:[]
         },
         {
