@@ -36,15 +36,14 @@ export default function SubSubjectPage({lesson}) {
                     
                     return (
                         <section id="introduction">
-                            <h1 className='font-extrabold text-lg my-4'><BookMarked className='inline mr-3'/>{data.judul}</h1>
-                            <h3 className='font-bold my-3'><Book className='inline mr-3'/>{data.subJudul}</h3>
+                            <h1 className={` ${data.judul == null? "null":""} font-extrabold text-lg my-4`}><BookMarked className='inline mr-3'/>{data.judul}</h1>
+                            <h3 className={` ${data.subjudul == null? "null":""} font-bold my-3`}><Book className='inline mr-3'/>{data.subjudul}</h3>
                             <p className='text-sm'>
                                 {data.ket}
                             </p>
                             <div className='leading-relaxed my-8 p-3 rounded-xl border border-teal-300/30 bg-gray-800/50 backdrop-blur-sm shadow-lg'>
                                 <Sigma className='' />
                                 <BlockMath math={`${data.equation}`}/>
-                                    
                             </div>
                         </section>
                         
