@@ -18,7 +18,7 @@ export default function Heading (){
              <img src="\icon\code_darkmode.svg"/>
           </a>
         </div>
-          <button className="
+          <a href="\donate" className="
             bg-green-700 hover:bg-transparent
             hover:ring-1 hover:ring-green-700
             text-white font-bold
@@ -28,7 +28,7 @@ export default function Heading (){
             transition-all duration-300 ease-in-out
             ">
           Donate
-        </button>
+        </a>
       </div>
       </div>
     </header>

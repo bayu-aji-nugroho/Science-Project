@@ -11,7 +11,7 @@ export default  function Home() {
             judul:"matematika",
             icon:"./Math.svg",
             paragraft: "Mengungkap pola, memecahkan masalah, dan melatih logika berpikir",
-            link:"/Math",
+            link:"/math",
             prasyarat:[]
         },
         {
