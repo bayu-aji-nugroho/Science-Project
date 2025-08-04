@@ -1,7 +1,7 @@
 import SubjectPage from "@/components/pages/subjectPage"
 
 
-export default async function Page({params}){
+export default async function Page(){
 
     const data = {
         judul:"MATEMATIKA",
