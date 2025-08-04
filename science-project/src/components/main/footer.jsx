@@ -4,7 +4,7 @@ export default function Footer({bg}){
      const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className={`${bg} text-white`}>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
@@ -17,7 +17,7 @@ export default function Footer({bg}){
           </div>
 
           {/* Bagian 2: Link Navigasi */}
-          <div>
+          <div className='hidden'>
             <h3 className="text-sm font-semibold tracking-wider uppercase">Navigasi</h3>
             <ul className="mt-4 space-y-2">
               <li><a href="/" className="hover:text-blue-400 transition-colors">Beranda</a></li>
@@ -46,11 +46,11 @@ export default function Footer({bg}){
           <div>
             <h3 className="text-sm font-semibold tracking-wider uppercase">Ikuti Kami</h3>
             <div className="flex mt-4 space-x-5">
-              <a href="https://instagram.com/namabrand" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+              <a href="https://www.instagram.com/ba_ngr_/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
                 <span className="sr-only">Instagram</span>
                 <FaInstagram className="w-6 h-6" />
               </a>
-              <a href="https://youtube.com/c/namabrand" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+              <a href="-" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
                 <span className="sr-only">YouTube</span>
                 <FaYoutube className="w-6 h-6" />
               </a>
@@ -61,7 +61,7 @@ export default function Footer({bg}){
 
         {/* Garis Pemisah & Copyright */}
         <div className="mt-12 border-t border-gray-800 pt-8 text-center">
-          <p className="text-sm text-gray-400">&copy; {currentYear} NamaBrand. Semua Hak Cipta Dilindungi.</p>
+          <p className="text-sm text-gray-400">&copy; {currentYear} bermatematika. Semua Hak Cipta Dilindungi.</p>
         </div>
       </div>
     </footer>
