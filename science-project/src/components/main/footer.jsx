@@ -4,7 +4,7 @@ export default function Footer({bg}){
      const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={`${bg} text-white mt-3 md:mt-5`}>
+    <footer className={`${bg} text-white mt-5 md:mt-7`}>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="md:flex grid grid-cols-1">
           
@@ -16,18 +16,19 @@ export default function Footer({bg}){
             </p>
           </div>
 
-          <div className='grid grid-cols-2'>
+          <div className='grid grid-cols-2 text-xs'>
             {/* Bagian 3: Kontak */}
-          <div>
+          <div className="text-xs">
             <h3 className="text-sm font-semibold tracking-wider uppercase">Kontak</h3>
             <ul className="m-4 space-y-3">
-              <li className="flex items-center">
-                <FaPhoneAlt className="w-5 h-5 mr-3 text-gray-400"/>
+              <li className="flex">
+                <FaPhoneAlt className="w-5 h-5 mr-3 text-white"/>
                 <a href="https://wa.me/message/QKSS2RZRYSC6K1 " className="hover:text-blue-400 transition-colors">+62 813-3267-8003</a>
               </li>
-              <li className="flex items-center">
-                <FaEnvelope className="w-5 h-5 mr-3 text-gray-400"/>
-                <div className="hover:text-blue-400 transition-colors">bayuanugroho81406@gmail.com</div>
+              <li className="flex">
+                <FaEnvelope className="w-5 h-5 mr-3 text-white"/>
+                <div className="whitespace-break-spaces md:hidden">bayuanugroho81406 @gmail.com</div>
+                <div className="whitespace-break-spaces hidden md:block">bayuanugroho81406@gmail.com</div>
               </li>
             </ul>
           </div>
@@ -35,7 +36,7 @@ export default function Footer({bg}){
           {/* Bagian 4: Media Sosial */}
           <div>
             <h3 className="text-sm font-semibold tracking-wider uppercase mx-3">Ikuti Kami</h3>
-            <div className="m-4 space-x-5">
+            <div className="m-4">
               <a href="https://www.instagram.com/ba_ngr_/" target="_blank" rel="noopener noreferrer" className="text-white flex m-3">
                 <FaInstagram className="w-5 h-5 mr-3 " />
                 <span className="">Instagram</span>

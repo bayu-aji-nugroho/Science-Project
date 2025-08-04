@@ -1,6 +1,7 @@
 // components/DonationPage.js
 "use client";
 
+import { ArrowDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export default function Donate() {
@@ -12,6 +13,9 @@ export default function Donate() {
     <div className={isDarkMode ? 'dark' : ''}>
       <div className=" min-h-screen text-gray-800 dark:text-gray-200 transition-colors duration-500">
         <div className="container mx-auto px-4 py-8 md:py-16">
+            <div className='fixed bottom-14 right-14 md:bottom-16 md:right-16 bg-gradient-to-r from-purple-600  to-indigo-500 p-3 rounded-full'>
+                <a href='#donate'><ArrowDown/></a>
+            </div>
 
           {/* Tombol Toggle Dark Mode */}
           
@@ -32,7 +36,7 @@ export default function Donate() {
                 <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
                   <h2 className="text-2xl font-bold mb-4 text-indigo-600 dark:text-indigo-400">Visi Kami 👁️</h2>
                   <p className="text-gray-700 dark:text-gray-300">
-                    Menciptakan kesempatan bagi setiap anak memperoleh kesempatan yang sama untuk meraih potensi terbaiknya tanpa terkendala biaya.
+                    Menciptakan kesempatan bagi setiap orang memperoleh kesempatan yang sama untuk meraih potensi terbaiknya tanpa terkendala biaya.
                   </p>
                 </div>
                 <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
@@ -51,16 +55,16 @@ export default function Donate() {
               <h2 className="text-3xl font-bold mb-8 text-gray-800 dark:text-gray-200">Mengapa Donasi Anda Begitu Penting? 🤔</h2>
               <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
                 <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md">
-                  <h3 className="text-xl font-semibold mb-2 text-purple-600 dark:text-purple-400">Memutus Rantai Kemiskinan</h3>
-                  <p className="text-gray-600 dark:text-gray-400">Pendidikan adalah kunci utama untuk meningkatkan taraf hidup dan membuka peluang ekonomi yang lebih baik.</p>
+                  <h3 className="text-xl font-semibold mb-2 text-purple-600 dark:text-purple-400">Memberi Kesempatan yang Sama untuk Setiap Orang.</h3>
+                  <p className="text-gray-600 dark:text-gray-400">Anda memberikan kesempatan yang setara. Setiap rupiah dari Anda adalah bahan bakar untuk memastikan bahwa kecerdasan tidak akan pernah padam hanya karena faktor ekonomi. </p>
                 </div>
                 <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md">
-                  <h3 className="text-xl font-semibold mb-2 text-pink-600 dark:text-pink-400">Membangun Generasi Unggul</h3>
-                  <p className="text-gray-600 dark:text-gray-400">Dukungan Anda membantu melahirkan calon pemimpin, inovator, dan profesional yang akan memajukan Indonesia.</p>
+                  <h3 className="text-xl font-semibold mb-2 text-pink-600 dark:text-pink-400">Mengubah Hafalan Menjadi Pemahaman dan Menyalakan Api Rasa Ingin Tahu.</h3>
+                  <p className="text-gray-600 dark:text-gray-400">Dengan mendukung kami, Anda mendanai pembuatan konten yang menyalakan api rasa ingin tahu. Anda membantu seorang beralih dari sekadar penghafal menjadi seorang pemikir kritis. </p>
                 </div>
                 <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md">
-                  <h3 className="text-xl font-semibold mb-2 text-indigo-600 dark:text-indigo-400">Investasi Jangka Panjang</h3>
-                  <p className="text-gray-600 dark:text-gray-400">Efek dari donasi Anda akan terus berlanjut, menciptakan dampak positif yang berkelanjutan bagi masyarakat.</p>
+                  <h3 className="text-xl font-semibold mb-2 text-indigo-600 dark:text-indigo-400">Menjaga Platform Tetap Gratis dan Berkualitas</h3>
+                  <p className="text-gray-600 dark:text-gray-400">ukungan Anda memastikan projek kami bisa terus beroperasi secara independen. Lebih dari itu, donasi Anda memungkinkan kami untuk tidak hanya bertahan, tetapi juga berkembang</p>
                 </div>
               </div>
             </section>
@@ -69,14 +73,14 @@ export default function Donate() {
 
 
             {/* Tombol Donasi */}
-            <section className="text-center">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">Siap Menjadi Bagian dari Perubahan?</h2>
+            <section className="text-center" id='donate'>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Siap Menjadi Bagian dari Visi Kami?</h2>
               <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-                Satu langkah kecil dari Anda bisa menjadi lompatan besar bagi masa depan seorang anak.
+                Satu langkah kecil dari Anda bisa menjadi lompatan besar bagi kami.
               </p>
-              <button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out text-xl">
+              <a href='https://app.midtrans.com/payment-links/1754299889408' className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out text-xl">
                 Donasi Sekarang ❤️
-              </button>
+              </a>
             </section>
           </main>
 

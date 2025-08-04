@@ -4,7 +4,7 @@ import getDataSlug from "@/lib/firebase/service";
 
 export default  async function Page({params}){
     const slug = params.slug
-    const data = await getDataSlug(slug)
+    const data = await getDataSlug(slug,"matematika",1)
     const lesson = {
     judul: "Eksponensial dan Logaritma",
     category: "Matematika Dasar",

@@ -35,6 +35,13 @@ export default  function Home() {
             link:"bio",
             prasyarat:[]
         },
+        {
+            judul:"SNBT 2026",
+            icon:"./SNBT.svg",
+            paragraft: "Persiapan SNBT 2026",
+            link:"bio",
+            prasyarat:[]
+        },
     ]
   return (
     <div className="font-main">

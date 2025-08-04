@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Handlee } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import { Comic_Relief } from 'next/font/google';
@@ -9,6 +9,12 @@ const fontC = Comic_Relief({
   subsets: ["latin"],
   weight:"400",
   variable: "--shadows"
+})
+
+const fontSub = Handlee({
+  subsets: ["latin"],
+  weight:"400",
+  variable: "--hand"
 })
 
 const geistSans = Geist({
@@ -30,7 +36,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${fontC.variable}  antialiased bg-[#030712] `}
+        className={`${geistSans.variable} ${geistMono.variable} ${fontC.variable} ${fontSub.variable}  antialiased bg-[#030712] font-main`}
       >
         <Analytics />
         <SpeedInsights />

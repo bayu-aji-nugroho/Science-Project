@@ -14,7 +14,7 @@ export default function SubSubjectPage({lesson}) {
 
 
   return (
-    <div className=" text-white min-h-screen font-sans">
+    <div className=" text-white min-h-screen font-sub-main">
       
 
       <main className="relative z-10 container mx-auto px-4 py-12 md:py-20">
@@ -35,10 +35,10 @@ export default function SubSubjectPage({lesson}) {
                 lesson.data.map((data,i)=>{
                     
                     return (
-                        <section id="introduction">
+                        <section key={i} id="introduction" className='font-sub-main'>
                             <h1 className={` ${data.judul == null? "null":""} font-extrabold text-lg my-4`}><BookMarked className='inline mr-3'/>{data.judul}</h1>
                             <h3 className={` ${data.subjudul == null? "null":""} font-bold my-3`}><Book className='inline mr-3'/>{data.subjudul}</h3>
-                            <p className='text-sm'>
+                            <p className=''>
                                 {data.ket}
                             </p>
                             <div className='leading-relaxed my-8 p-3 rounded-xl border border-teal-300/30 bg-gray-800/50 backdrop-blur-sm shadow-lg'>
