@@ -36,12 +36,12 @@ export default function SubSubjectPage({lesson}) {
                     
                     return (
                         <section key={i} id="introduction" className='font-sub-main'>
-                            <h1 className={` ${data.judul == null? "null":""} font-extrabold text-lg my-4`}><BookMarked className='inline mr-3'/>{data.judul}</h1>
-                            <h3 className={` ${data.subjudul == null? "null":""} font-bold my-3`}><Book className='inline mr-3'/>{data.subjudul}</h3>
+                            <h1 className={` ${data.judul == null? "hidden":""} font-extrabold text-lg my-4`}><BookMarked className={'inline mr-3'}/>{data.judul}</h1>
+                            <h3 className={` ${data.subjudul == null? "hidden":""} font-bold my-3`}><Book className='inline mr-3'/>{data.subjudul}</h3>
                             <p className=''>
                                 {data.ket}
                             </p>
-                            <div className='leading-relaxed my-8 p-3 rounded-xl border border-teal-300/30 bg-gray-800/50 backdrop-blur-sm shadow-lg'>
+                            <div className={`${data.subjudul == null? "hidden":""} leading-relaxed my-8 p-3 rounded-xl border border-teal-300/30 bg-gray-800/50 backdrop-blur-sm shadow-lg`}>
                                 <Sigma className='' />
                                 <BlockMath math={`${data.equation}`}/>
                             </div>
@@ -64,11 +64,11 @@ export default function SubSubjectPage({lesson}) {
                   Poin Kunci
                 </h3>
                 {
-                    lesson.pointKunci.map((data)=>(
-                        <div>
+                    lesson.pointKunci.map((data, i)=>(
+                        <div key={i}>
                             <div className="flex">
                                 <CheckCircle className="w-5 h-5 mr-3 mt-1 text-teal-400 flex-shrink-0" />
-                                <span>Fisika kuantum berlaku pada skala sangat kecil (atom dan partikel).</span>
+                                <span>{data}.</span>
                             </div>
                         </div>
                     ))
