@@ -11,14 +11,14 @@ export default  function Home() {
             judul:"matematika",
             icon:"./Math.svg",
             paragraft: "Mengungkap pola, memecahkan masalah, dan melatih logika berpikir",
-            link:"/math",
+            link:"/Math",
             prasyarat:[]
         },
         {
             judul:"fisika",
             icon:"./Physics.svg",
             paragraft: "Mempelajari hukum alam yang mengatur gerak, energi, dan materi.",
-            link:"/phy",
+            link:"/Phy",
             prasyarat:[]
         },
         {
