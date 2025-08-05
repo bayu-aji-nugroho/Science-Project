@@ -3,7 +3,7 @@ import app from "./init"
 
 const db = getFirestore(app)
 
-export default async function getDataSlug(slug,collectionName,mode){
+export default async function getDataSlug(slug = null,collectionName,mode){
     if(mode ===1){
         const docRef = doc(db, collectionName, slug);
         const docsnap = await getDoc(docRef)
@@ -16,7 +16,12 @@ export default async function getDataSlug(slug,collectionName,mode){
     }else if(mode === 2){
         const collectionref = collection(db,collectionName);
         const querysnapshot = await getDocs(collectionref)
-        const docssnap = querysnapshot.docs.map((doc)=>doc.data())
+        const docssnap = querysnapshot.docs.map((doc)=>(
+            {
+                id: doc.id,        // <-- Menyertakan ID unik dari dokumen
+                ...doc.data() 
+            }
+        ))
         return docssnap;
     }
      

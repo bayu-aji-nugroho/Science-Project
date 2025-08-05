@@ -3,10 +3,10 @@ import SubjectPage from "@/components/pages/subjectPage"
 
 export default function Page(){
     const data = {
-        judul:"FISIKA",
-        icon:"/Physics.svg",
+        judul:"SNBT 2026",
+        icon:"/SNBT.svg",
         infor:"Fisika adalah ilmu alam yang mempelajari materi, energi, dan interaksi fundamental di antara keduanya untuk menjelaskan bagaimana alam semesta bekerja dari skala terkecil hingga terbesar.",
-        theme:["bg-blue-800","bg-blue-900"],
+        theme:["bg-gray-800","bg-gray-900"],
         pin:[{
             link:"/exam",
             prasyarat:[],

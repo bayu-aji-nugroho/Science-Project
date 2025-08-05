@@ -1,7 +1,8 @@
 import HeadingSubject from "@/components/ui/headingsubject";
-import db from "@/app/(subjects)/Math/subMateri.json"
 import Card from "@/components/ui/card";
 import Footer from "@/components/main/footer";
+import getDataSlug from "@/lib/firebase/service";
+import { File } from "lucide-react";
 
 
 const Sidebar = () =>{
@@ -12,7 +13,16 @@ const Sidebar = () =>{
     )
 }
 
-export default function SubjectPage({data}){
+const Empty = () =>{
+    return (
+        <div className="flex">
+            <File />
+        </div>
+    )
+}
+
+export default async function SubjectPage({data,subject}){
+    const db = await getDataSlug(null,subject,2);
     return (
         <div className="text-white">
            
@@ -22,7 +32,19 @@ export default function SubjectPage({data}){
                 <h1 className="m-5 font-bold ">Mau belajar apa hari ini?</h1>
                 <div className="md:flex">
                     <div className="basis-1/4"><Sidebar/></div>
-                    <div className="basis-3/4"><Card data={db} theme={data.theme[0]} imageSize={"rounded-full"} /></div>
+                    {
+                        db.length == 0? (
+                            <div className="flex justify-center items-center basis-3/4">
+                                <div className="flex my-5"> 
+                                    <Empty/>
+                                    <h1 className="ml-3">Sementara masih kosong</h1>
+                                </div>
+                                
+                            </div>
+                        ):(
+                            <div className="basis-3/4"><Card data={db} theme={data.theme[0]} imageSize={"rounded-full"} /></div>
+                        )
+                    }
                     
                 </div>
             </div>

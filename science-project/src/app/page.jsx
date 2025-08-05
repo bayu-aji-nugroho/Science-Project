@@ -25,21 +25,21 @@ export default  function Home() {
             judul:"kimia",
             icon:"./Kimia.svg",
             paragraft: "Ilmu pusat yang menghubungkan semua cabang sains.",
-            link:"chi",
+            link:"/Chi",
             prasyarat:[]
         },
         {
             judul:"biologi",
             icon:"./Biology.svg",
             paragraft: "Mempelajari sistem kompleks yang membentuk semua makhluk hidup",
-            link:"bio",
+            link:"/Bio",
             prasyarat:[]
         },
         {
             judul:"SNBT 2026",
             icon:"./SNBT.svg",
             paragraft: "Persiapan SNBT 2026",
-            link:"bio",
+            link:"/Snbt",
             prasyarat:[]
         },
     ]
