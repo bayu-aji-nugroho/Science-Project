@@ -1,4 +1,11 @@
+'use client';
+
+import AuthModal from "@/auth/authModal"
+import { useState } from "react"
+
 export default function Heading (){
+
+  const [IsModalOpen, setIsModalOpen] = useState(false)
     return (
 
     <header className="text-white md:flex ">
@@ -11,26 +18,17 @@ export default function Heading (){
         </p>
       </div>
       <div className=" mt-16 flex items-center justify-center md:basis-1/4">
-      <div className="flex">
-        <div className="p-3">
-          <a href="https://www.bermatematika.my.id/" className="flex">
-            <p className="mx-1">portfolioku</p>
-             <img src="\icon\code_darkmode.svg"/>
-          </a>
-        </div>
-          <a href="\donate" className="
-            bg-green-700 hover:bg-transparent
-            hover:ring-1 hover:ring-green-700
-            text-white font-bold
+        <div className="  ">
+          <button onClick={()=>setIsModalOpen(true)} className="m-3 bg-green-700 hover:bg-transparent hover:ring-1 hover:ring-green-700 text-white font-bold
             py-3 px-9
             rounded-full 
             hover:shadow-green-600 hover:shadow-md
-            transition-all duration-300 ease-in-out
-            ">
-          Donate
-        </a>
+            transition-all duration-300 ease-in-out">
+            <p className="">Login</p>
+          </button>
+        </div>
       </div>
-      </div>
+      <AuthModal isOpen={IsModalOpen} onClose={()=> setIsModalOpen(false)} />
     </header>
     )
 }

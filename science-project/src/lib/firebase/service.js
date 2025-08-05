@@ -1,7 +1,6 @@
 import {collection, doc, getDoc, getDocs, getFirestore } from "firebase/firestore"
-import app from "./init"
+import {db} from "./init"
 
-const db = getFirestore(app)
 
 export default async function getDataSlug(slug = null,collectionName,mode){
     if(mode ===1){
