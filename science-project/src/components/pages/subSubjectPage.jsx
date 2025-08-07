@@ -1,16 +1,12 @@
 
 
-
-// components/SciencePageTemplate.jsx
-
 import { Brain, FlaskConical, Dna, Lightbulb, CheckCircle, Code, Book, BookMarked, Sigma } from 'lucide-react';
 import { BlockMath } from 'react-katex';
 
-// Anda bisa membuat komponen Ikon ini untuk mempermudah
 
 
 export default function SubSubjectPage({lesson}) {
-  // Data ini nantinya akan datang dari CMS atau API Anda
+
 
 
   return (

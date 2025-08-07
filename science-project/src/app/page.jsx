@@ -5,7 +5,9 @@ import Heading from "../components/main/heading"
 import VisiMisi from "../components/main/visimisi";
 import Footer from "@/components/main/footer";
 
+
 export default  function Home() {
+  
   const data = [
         {
             judul:"matematika",
@@ -47,7 +49,7 @@ export default  function Home() {
     <div className="font-main">
       <Heading />
       <VisiMisi />
-      <Card data={data} theme={"bg-green-600"} imageSize={"w-1/3 w-1/3"}/> 
+      <Card data={data} theme={"from-green-600 via-green-800 to-lime-600"} imageSize={"w-1/3 w-1/3"}/> 
       <Footer bg={"bg-green-800"} />
     </div>
   )}

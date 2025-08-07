@@ -1,6 +1,5 @@
-// app/components/RegisterForm.jsx
-
 'use client';
+
 import { auth } from "@/lib/firebase/init";
 import {createUserWithEmailAndPassword} from "firebase/auth"
 

@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { Comic_Relief } from 'next/font/google';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import 'katex/dist/katex.min.css';
+import AuthContextProvider from "@/auth/authContext";
 
 const fontC = Comic_Relief({
   subsets: ["latin"],
@@ -29,7 +30,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Science Project",
-  description: "platform pendidikan gratis ",
+  description: "Ayo eksplorasi dunia sains yang inovatif dan menarik secara gratis!",
 };
 
 export default function RootLayout({ children }) {
@@ -40,7 +41,10 @@ export default function RootLayout({ children }) {
       >
         <Analytics />
         <SpeedInsights />
-        {children}
+        <AuthContextProvider>
+          {children}
+        </AuthContextProvider>
+        
       </body>
     </html>
   );

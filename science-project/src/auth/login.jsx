@@ -1,16 +1,18 @@
-// app/components/LoginForm.jsx
-
 
 'use client';
 
+import { auth } from "@/lib/firebase/init";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 
 const Login = () => {
+   
+    
     const [data, setdata] = useState({
         email:"",
         password:""
     })
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
     e.preventDefault();
     const {name, value } = e.target;
     setdata((data)=>({
@@ -18,6 +20,17 @@ const Login = () => {
         [name]:value
     }))
   };
+
+   async function handleSubmit (e)  {
+   e.preventDefault()
+    try{
+      const credential = await signInWithEmailAndPassword(auth,data.email,data.password)
+      console.log(credential)
+      
+    }catch{
+      console.log("notfound"); 
+    }
+   }
 
 
 
@@ -35,7 +48,7 @@ const Login = () => {
           id="email"
           name="email"
           value={data.email}
-          onChange={handleSubmit}
+          onChange={handleChange}
           required
           className="outline-none mt-1 block w-full px-3 py-2 border-b-2 border-white hover:border-green-700 focus:border-blue-600 sm:text-sm"
           
@@ -50,7 +63,7 @@ const Login = () => {
         </label>
         <input
           type="password"
-          onChange={handleSubmit}
+          onChange={handleChange}
           id="password"
           name="password"
           value={data.password}

@@ -3,7 +3,7 @@ export default function Card({data,theme,imageSize}){
       <div className={`mt-10 mx-2 ${data.length == 1?"flex":"grid grid-cols-2 md:grid-cols-4 bg-transparent"}`}>
        {
         data.map((data,i)=>(
-          <a href={`${data.link}`} className={` text-white p-4 rounded-2xl m-2 ${theme} border border-teal-300/30 `} key={i}>
+          <a href={`${data.link}`} className={` text-white p-4 rounded-2xl m-2 bg-gradient-to-br ${theme} `} key={i}>
             <div className=" text-5xl ">
               <img className={`aspect-square ${imageSize} ${data.icon == null? "hidden":""}`} src= {`${data.icon}` } />
             </div>

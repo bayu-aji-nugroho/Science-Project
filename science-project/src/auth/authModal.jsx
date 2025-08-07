@@ -5,11 +5,12 @@
 import { useState, useEffect } from 'react';
 import Login from './login';
 import Register from './register';
+import { SidebarClose } from 'lucide-react';
 
 // Komponen Icon X untuk tombol close
 const CloseIcon = () => (
   
-    <div>X</div>
+    <div><SidebarClose/></div>
   
 );
 
