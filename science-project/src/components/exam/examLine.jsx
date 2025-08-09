@@ -10,7 +10,7 @@ import { BlockMath } from 'react-katex';
 const quizData = [
   {
     question: "3^5 \\times 3^6 = ... ",
-    options: ["x^{11}", "x^{12}", "x", "x^{30}"],
+    options: ["3^{11}", "3^{12}", "3", "3^{30}"],
     correctAnswerIndex: 0,
     explanation: "-"
   },
