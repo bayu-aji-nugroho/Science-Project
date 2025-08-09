@@ -1,20 +1,23 @@
+'use client'
 
-
-import { Brain, FlaskConical, Dna, Lightbulb, CheckCircle, Code, Book, BookMarked, Sigma } from 'lucide-react';
+import { Usecontext } from '@/auth/authContext';
+import { Lightbulb, CheckCircle,  Book, BookMarked, Sigma } from 'lucide-react';
 import { BlockMath } from 'react-katex';
+import Io from '../developer/io';
 
 
 
 export default function SubSubjectPage({lesson}) {
+  const {admin} = Usecontext()
 
 
 
   return (
     <div className=" text-white min-h-screen font-sub-main">
-      
-
+     
       <main className="relative z-10 container mx-auto px-4 py-12 md:py-20">
         <header className="text-center mb-16 md:mb-24">
+           {admin && (<div>ADMIN</div>)}
             <p className="text-lg text-blue-400 font-bold mb-2">{lesson.category}</p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-green-400 to-teal-300 text-transparent bg-clip-text">
             {lesson.judul}
@@ -34,10 +37,10 @@ export default function SubSubjectPage({lesson}) {
                         <section key={i} id="introduction" className='font-sub-main'>
                             <h1 className={` ${data.judul == null? "hidden":""} font-extrabold text-lg my-4`}><BookMarked className={'inline mr-3'}/>{data.judul}</h1>
                             <h3 className={` ${data.subjudul == null? "hidden":""} font-bold my-3`}><Book className='inline mr-3'/>{data.subjudul}</h3>
-                            <p className=''>
+                            <p className={`${data.ket == null?"hidden":""}`}>
                                 {data.ket}
                             </p>
-                            <div className={`${data.subjudul == null? "hidden":""} leading-relaxed my-8 p-3 rounded-xl border border-teal-300/30 bg-gray-800/50 backdrop-blur-sm shadow-lg`}>
+                            <div className={`${data.equation == null? "hidden":""} leading-relaxed my-8 p-3 rounded-xl border border-teal-300/30 bg-gray-800/50 backdrop-blur-sm shadow-lg`}>
                                 <Sigma className='' />
                                 <BlockMath math={`${data.equation}`}/>
                             </div>
@@ -50,6 +53,7 @@ export default function SubSubjectPage({lesson}) {
 
 
 
+          {admin && (<Io></Io>)}
           </article>
 
           {/* --- SIDEBAR / TABLE OF CONTENTS --- */}

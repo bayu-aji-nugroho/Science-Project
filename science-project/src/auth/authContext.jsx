@@ -15,6 +15,7 @@ const logout = () =>{
 export default function AuthContextProvider({children}){
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
+    const [admin, setAdmin] = useState(false)
 
    useEffect(
     ()=>{
@@ -24,6 +25,10 @@ export default function AuthContextProvider({children}){
                     uid: user.uid,
                     email:user.email,
                 }) 
+
+                if(user.uid == "5GpZaWrrFKhmo6HpvbHTJBCImxZ2"){
+                    setAdmin(true)
+                }
             } else {
                 setUser(null)
             }
@@ -36,7 +41,7 @@ export default function AuthContextProvider({children}){
    )
 
    return(
-    <AuthContext.Provider value={{user, loading, logout}}>
+    <AuthContext.Provider value={{user, loading, logout, admin}}>
         {children}
     </AuthContext.Provider>
    )

@@ -4,7 +4,7 @@ import Main from "@/components/exam/main";
 
 
 export default  async function Page({params}){
-    const slug = params.slug
+    const slug = await params.slug
     const data = await getDataSlug(slug,"matematika",1)
     const pretest = await getDataSlug("Pretest","matematika",1)
    
