@@ -13,11 +13,13 @@ function GenerateVariabel(text) {
         judul: null,
         subjudul: null,
         ket: null,
-        equation: null
+        equation: null,
+        defp:null,
+        defequ:null,
     };
 
-    const openTags = ["(text)", "(h1)", "(h2)", "(equ)"];
-    const closeTags = ["/(text)", "/(h1)", "/(h2)", "/(equ)"];
+    const openTags = ["(text)", "(h1)", "(h2)", "(equ)", "(defp)", "(defequ)"];
+    const closeTags = ["/(text)", "/(h1)", "/(h2)", "/(equ)", "/(defp)","/(defequ)"];
 
     data.forEach((word, i) => {
         if (openTags.includes(word) || closeTags.includes(word)) {
@@ -52,6 +54,11 @@ function GenerateVariabel(text) {
             case "(equ)":
                 finalData.equation = kontenString;
                 break;
+              case "(defp)":
+                finalData.defp = kontenString;
+                break;
+              case "(defequ)":
+                finalData.defequ = kontenString;
         }
     }
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { Usecontext } from '@/auth/authContext';
-import { Lightbulb, CheckCircle,  Book, BookMarked, Sigma } from 'lucide-react';
+import { Lightbulb, CheckCircle,  Book, BookMarked, Sigma, Pyramid } from 'lucide-react';
 import { BlockMath } from 'react-katex';
 import Io from '../developer/io';
 import ExamLine from '../exam/examLine';
@@ -45,6 +45,18 @@ export default function SubSubjectPage({lesson}) {
                             <div className={`${data.equation == null? "hidden":""} hover:bg-transparent transform duration-500 leading-relaxed my-8 p-3 rounded-xl border border-teal-300/30 bg-gray-800/50 backdrop-blur-sm shadow-lg`}>
                                 <Sigma className='' />
                                 <BlockMath math={`${data.equation}`}/>
+                            </div>
+                            <div className={`${(data.defequ == null && data.defp == null)? "hidden":""} bg-gray-800/50 backdrop-blur-sm shadow-lg p-3 my-5 rounded-2xl border border-teal-300/30 `}>
+                            <div className='flex items-center'>
+                               <Pyramid className='m-1 mr-2' />
+                                <h1 className='font-extrabold'>Definisi</h1>
+                            </div>
+                             
+                              <div className=''>
+                                <p className='p-2'>{`${data.defp}`}</p>
+                                <BlockMath math={`${data.defequ}`} />
+                              </div>
+                              
                             </div>
                             
                         </section>
