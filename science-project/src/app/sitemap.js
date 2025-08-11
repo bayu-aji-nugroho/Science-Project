@@ -49,7 +49,7 @@ export default async function sitemap() {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/matematika`,
+      url: `${baseUrl}/Math`,
       lastModified: new Date(),
       priority: 0.9,
     },
