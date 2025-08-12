@@ -4,7 +4,7 @@ export default function Footer({bg}){
      const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={`${bg} text-white mt-5 md:mt-7`}>
+    <footer className={`${bg} text-white mt-5 pb-4 md:mt-7`}>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="md:flex grid grid-cols-1">
           
@@ -54,6 +54,20 @@ export default function Footer({bg}){
 
         </div>
       </div>
+      <div className='text-xs md:text-base flex flex-col justify-center items-center p-3 border-t-2 border-gray-500'>
+        <p>Hak Cipta © <span id="copyright-year">2025</span> Bayu Aji Nugroho. </p>
+        <p>
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">
+              Lisensi Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Internasional
+          </a>.
+        </p>
+        <p>
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">
+                <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Lisensi CC BY-NC-SA 4.0"/>
+            </a>
+        </p>
+    </div>
+   
     </footer>
   );
 }

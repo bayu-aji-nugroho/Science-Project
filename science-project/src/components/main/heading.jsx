@@ -22,10 +22,14 @@ export default function Heading (){
 
     <header className="text-white md:flex ">
       <div className=" px-4  md:text-left   shadow-2xl shadow-green-700 md:rounded-br-full p-5 md:basis-3/4">
-        <h1 className=" flex text-3xl text-center sm:text-5xl lg:text-5xl font-extrabold text-green-500 mb-2 md:mb-3 ">
+        <div className=" flex-col justify-center items-center lg:flex text-3xl text-center sm:text-5xl lg:text-5xl font-extrabold text-green-500 mb-2 md:mb-3 ">
           <TypingAnimation text={"Science Project"}></TypingAnimation>
-          {admin && (<div className="text-blue-700 mx-5">(ADMIN)</div>)}
-        </h1>
+          <div>
+            {admin && (<div className="text-blue-700 mx-5">(ADMIN)</div>)}
+            </div>
+          <div>
+        </div>
+        </div>
         <p className="text-base sm:text-lg lg:text-xl text-gray-300 px-2 py-3 md:px-0 font-bold">
           Eksplorasi dunia sains yang inovatif dan menarik secara gratis!
         </p>

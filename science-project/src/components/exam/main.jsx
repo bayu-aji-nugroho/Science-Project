@@ -63,6 +63,7 @@ export default function HalamanUjian({dataSoal}) {
     let skorBenar = 0;
     dataSoal.forEach((soal, index) => {
       if (jawabanPengguna[index] === soal.jawabanBenar) {
+        
         skorBenar++;
       }
     });

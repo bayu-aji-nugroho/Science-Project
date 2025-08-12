@@ -59,6 +59,9 @@ function GenerateVariabel(text) {
                 break;
               case "(defequ)":
                 finalData.defequ = kontenString;
+                break;
+              case "(exam)":
+                finalData.exam = true;
         }
     }
 
@@ -71,14 +74,14 @@ function GenerateVariabel(text) {
  // Pastikan path ini benar
 
 // Ganti dengan ID dokumen yang sebenarnya
-const idDokumen = 'eksponensial-dan-logaritma'; 
+
 
 // 1. Buat referensi ke dokumen yang ingin di-update
-const docRef = doc(db, 'matematika', idDokumen);
 
 
 
-async function tambahDataKeArray(dataBaru) {
+
+async function tambahDataKeArray(dataBaru, docRef) {
   try {
     await updateDoc(docRef, {
         "article.data": arrayUnion(dataBaru)
@@ -93,7 +96,8 @@ async function tambahDataKeArray(dataBaru) {
 
 
 
-export default function Io(){
+export default function Io({idDokumen, collectionName}){
+  const docRef = doc(db, collectionName, idDokumen);
   const [loading, setLoading] = useState(false)
   const textareaRef = useRef(null);
   const [data, setData] = useState("")
@@ -112,7 +116,7 @@ export default function Io(){
     setLoading(true)
     e.preventDefault();
     const a = GenerateVariabel(data)
-    tambahDataKeArray(a);
+    tambahDataKeArray(a,docRef);
    
   }
 

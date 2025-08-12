@@ -1,36 +1,37 @@
+# Sains Project
+Science project adalah projek yang mempunyai tujuan memberikan akses pengetahuan sains gratis, website ini deperuntukan bagi siapa saja yang ingin belajar sains.
 
 
-## Getting Started
+##  Daftar Isi
+* [Fitur Utama]()
+* [Tumpukan Teknologi (Tech Stack)]()
+* [Memulai (Getting Started)]()
+* [Penggunaan]()
+* [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-First, run the development server:
+## Fitur Utama
+- 🚀 Fitur A - Soal tak terbatas (next).
+- 🎨 Fitur B - Deskripsi singkat tentang fitur ini.
+- 🔒 Fitur C - Deskripsi singkat tentang fitur ini.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tumpukan Teknologi (Tech Stack)
+**Frontend:**
+- [React](https://reactjs.org/) (v18.2)
+- [next js](https://nextjs.org/) 
+- [Tailwind CSS](https://tailwindcss.com/) (v4.1)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Backend:**
+- Firebase
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**Database:**
+- [Cloud Firestore](https://firebase.google.com/docs/firestore)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Lisensi
 
-To learn more about Next.js, take a look at the following resources:
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Copyright (c) 2025 Bayu Aji Nugroho

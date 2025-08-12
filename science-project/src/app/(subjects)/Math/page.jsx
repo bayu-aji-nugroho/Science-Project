@@ -12,7 +12,7 @@ export default async function Page(){
             link:"/Math/Pretest",
             prasyarat:[],
             judul:"Pretest Matematika",
-            paragraft:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus deleniti incidunt temporibus asperiores consequatur sapiente commodi natus, neque accusantium eius quia voluptatibus delectus officiis voluptas, dignissimos doloremque dolor quae in!"
+            paragraft:"Siap memulai tantangan matematika? Pretest ini akan menguji kesiapan dan pengetahuan dasarmu yang biasanya diajarkan di tingkat SD dan SMP di kurikulum international baccalaureate . Buktikan kemampuanmu sebelum lanjut."
             }],
 
     }

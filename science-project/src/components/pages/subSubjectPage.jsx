@@ -56,6 +56,7 @@ export default function SubSubjectPage({lesson}) {
                                 <p className='p-2'>{`${data.defp}`}</p>
                                 <BlockMath math={`${data.defequ}`} />
                               </div>
+                              {data.exam != null && (<ExamLine />)}
                               
                             </div>
                             
@@ -65,11 +66,10 @@ export default function SubSubjectPage({lesson}) {
                 }
             )
             }
-            <ExamLine />
 
 
 
-          {admin && (<Io></Io>)}
+          {admin && (<Io collectionName={"matematika"} idDokumen={"eksponensial-dan-logaritma"} />)}
           </article>
 
           {/* --- SIDEBAR / TABLE OF CONTENTS --- */}
