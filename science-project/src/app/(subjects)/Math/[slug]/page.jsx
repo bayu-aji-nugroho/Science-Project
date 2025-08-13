@@ -15,7 +15,7 @@ export default  async function Page({params}){
                 slug == "Pretest"?(
                     <Main dataSoal={pretest.exam}/>
                 ):(
-                    <SubSubjectPage lesson={data.article} />
+                    <SubSubjectPage leason={data.article} />
                 )
             }
             

@@ -69,12 +69,12 @@ export default function ExamLine () {
 
   if (showScore) {
     return (
-      <div className="bg-white dark:bg-slate-800 shadow-xl rounded-2xl p-6 sm:p-8 mx-auto text-center border border-slate-200 dark:border-slate-700">
+      <div className="bg-white dark:bg-slate-800 shadow-xl rounded-2xl p-3 sm:p-4 mx-auto text-center border border-slate-200 dark:border-slate-700">
         
         <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 mb-2">Kuis Selesai!</h2>
-        <p className="text-slate-600 dark:text-slate-300 mb-6">Skor akhir kamu adalah:</p>
-        <div className="bg-blue-500 text-white rounded-full w-32 h-32 flex items-center justify-center mx-auto mb-6 flex-col shadow-lg">
-          <span className="text-4xl font-bold">{score}</span>
+        <p className="text-slate-600 dark:text-slate-300 mb-3">Skor akhir kamu adalah:</p>
+        <div className="bg-blue-500 text-white rounded-full w-32 h-32 flex items-center justify-center mx-auto mb-3 flex-col shadow-lg">
+          <span className="text-2xl font-bold">{score}</span>
           <span className="text-lg">/ {quizData.length}</span>
         </div>
         <button
@@ -96,7 +96,7 @@ export default function ExamLine () {
         <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5 mt-2">
           <div 
             className="bg-gradient-to-r from-lime-700 via-lime-500 to-lime-300  h-2.5 rounded-full transition-all duration-500 ease-in-out" 
-            style={{ width: `${((currentQuestionIndex + 1) / quizData.length) * 100}%` }}>
+            style={{ width: `${((currentQuestionIndex ) / quizData.length) * 100}%` }}>
           </div>
         </div>
       </div>

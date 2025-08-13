@@ -1,19 +1,23 @@
+"use client"
+import { motion } from "framer-motion";
+
 export default function Card({data,theme,imageSize}){
     return (
       <div className={`mt-10 mx-2 ${data.length == 1?"flex":"grid grid-cols-2 md:grid-cols-4 bg-transparent"}`}>
        {
         data.map((data,i)=>(
              data.judul !== undefined && (
-                <a href={`${data.link}`} key={i} className={` text-white p-4 rounded-2xl m-2 bg-gradient-to-br ${theme} ` }>
+                <motion.a 
+                 initial={{opacity:0}} whileInView={{opacity:1}} whileTap={{scale: 0.80}} href={`${data.link}`} key={i} className={` text-white p-4 rounded-2xl m-2 bg-gradient-to-br ${theme} ` }>
                     <div className=" text-5xl ">
                       <img className={`aspect-square ${imageSize} ${data.icon == null? "hidden":""}`} src= {`${data.icon}` } />
                     </div>
               
-                    <h1 className="text-md font-bold">
+                    <h1 className="lg:text-md text-sm font-bold">
                       {data.judul}
                     </h1>
                   
-                    <p className="text-sm text-gray-300 ">
+                    <p className="lg:text-sm text-gray-300 text-xs ">
                       {data.paragraft}
                     </p>
                     { 
@@ -23,7 +27,7 @@ export default function Card({data,theme,imageSize}){
                           <div key={i} className="flex"> {dataP}</div>
                       ))
                     }
-                  </a>
+                  </motion.a>
               )
             
           
