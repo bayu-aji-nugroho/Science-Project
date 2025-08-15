@@ -8,7 +8,7 @@ export default function Card({data,theme,imageSize}){
         data.map((data,i)=>(
              data.judul !== undefined && (
                 <motion.a 
-                 initial={{opacity:0}} whileInView={{opacity:1}} whileTap={{scale: 0.80}} href={`${data.link}`} key={i} className={` text-white p-4 rounded-2xl m-2 bg-gradient-to-br ${theme} ` }>
+                  whileTap={{scale: 0.80}} href={`${data.link}`} key={i} className={` text-white p-4 rounded-2xl m-2 bg-gradient-to-br ${theme} hover:bg-` }>
                     <div className=" text-5xl ">
                       <img className={`aspect-square ${imageSize} ${data.icon == null? "hidden":""}`} src= {`${data.icon}` } />
                     </div>

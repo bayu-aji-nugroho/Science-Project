@@ -1,5 +1,7 @@
 "use client";
 import { InlineMath, BlockMath } from 'react-katex';
+import IoExam from '../developer/ioExam';
+import { Usecontext } from '@/auth/authContext';
 
 const Page = ({waktu,soalIndex, jawabanPengguna,
      handleSoalSebelumnya,handleSoalBerikutnya, handlePilihJawaban, dataSoal})=>{
@@ -79,15 +81,17 @@ const Page = ({waktu,soalIndex, jawabanPengguna,
 
 export default function MainPage({waktu,soalIndex, jawabanPengguna,
      handleSoalSebelumnya,handleSoalBerikutnya, handlePilihJawaban, handleSquere, dataSoal}){
+      const {admin} = Usecontext()
       return (
-        <div className="md:flex  ">
+        <div>
+        <div className="md:flex">
           <div className="md:basis-1/4 lg:mr-4">
           <div className="md:grid md:grid-cols-4 m-5 md:my-10 hidden ">
             {
             dataSoal.map((_,i)=>{
               const isAnswered = Object.hasOwn(jawabanPengguna,i);
               return(
-              <button onClick={() => handleSquere(i)} className={`cursor-pointer md:rounded-xl p-2 text-white flex justify-center items-center m-2 ring ring-gray-700 aspect-square
+              <button key={i} onClick={() => handleSquere(i)} className={`cursor-pointer md:rounded-xl p-2 text-white flex justify-center items-center m-2 ring ring-gray-700 aspect-square
               ${isAnswered? 'bg-green-600 transition duration-200':"bg-transparent"} `}>
                 {i+1}
               </button> )
@@ -104,6 +108,13 @@ export default function MainPage({waktu,soalIndex, jawabanPengguna,
                     handleSoalSebelumnya={handleSoalSebelumnya} dataSoal={dataSoal} />
           </div>
           
+        </div>
+        {
+          admin && (
+            <IoExam collectionName={"matematika"} idDokumen={"Pretest"} />
+          )
+        }
+        
         </div>
         
       )

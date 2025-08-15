@@ -48,7 +48,9 @@ export default  function Home() {
   return (
     <div className="font-main">
       <Heading />
-      <VisiMisi />
+      <div className="sticky top-0 bg-black/30 backdrop-blur-lg">
+        <VisiMisi/>
+      </div>
       <Card data={data} theme={"from-green-600 via-green-800 to-lime-600"} imageSize={"w-1/3 w-1/3"}/> 
       <Footer bg={"bg-green-800"} />
     </div>

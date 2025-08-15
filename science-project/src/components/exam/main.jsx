@@ -5,6 +5,7 @@ import 'katex/dist/katex.min.css';
 //import dataSoal from "@/components/exam/data.json"
 import MainPage from './mainpage';
 import Skor from './skor';
+import { Usecontext } from '@/auth/authContext';
 
 
 export default function HalamanUjian({dataSoal}) {
@@ -13,7 +14,8 @@ export default function HalamanUjian({dataSoal}) {
   const [jawabanPengguna, setJawabanPengguna] = useState({});
   const [tampilkanSkor, setTampilkanSkor] = useState(false);
   const [skor, setSkor] = useState(0);
-  const [waktu, setWaktu] = useState(300); 
+  
+  const [waktu, setWaktu] = useState(600); 
   
 
   useEffect(() => {

@@ -30,7 +30,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Science Project",
+  title: "neuro",
   description: "Eksplorasi dunia sains yang inovatif dan menarik secara gratis!",
   icons: {
     icon: "/icon.png"

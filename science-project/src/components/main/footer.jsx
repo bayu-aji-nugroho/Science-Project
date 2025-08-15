@@ -12,7 +12,7 @@ export default function Footer({bg}){
           <div className="mb-6 md:mb-0 basis-1/2">
             <h2 className="text-2xl font-bold text-blue-400">Tentang Kami</h2>
             <p className="mt-2 text-gray-400">
-             science project adalah projek yang mempunyai tujuan memberikan akses pengetahuan sains gratis untuk siapapun
+             NEURO adalah platform pendidikan yang akan menyediakan layanan belajar secara gratis.
             </p>
           </div>
 
